@@ -10,7 +10,7 @@ export const App = () => {
 
   return (
     <div>
-      <h1>PhoneBook</h1>
+      <h1>PhoneBook </h1>
       <ContactForm />
       <h2>Contacts</h2>
       <FilterContact />
