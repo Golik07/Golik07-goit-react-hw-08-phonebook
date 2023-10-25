@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { deleteContacts, getContacts, setContacts } from 'service/api';
+import { deleteContacts, getContacts, setContacts } from '../auth/operations';
 import {
   deleteContactsHelper,
   getContactsAll,

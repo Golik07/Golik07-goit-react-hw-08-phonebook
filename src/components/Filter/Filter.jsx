@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { Form, Section, Label, Input } from './Filter.styled';
-import { filterContacts } from 'redux/filterSlice';
-import { getContactsState } from 'redux/selectors';
+import { filterContacts } from 'redux/contacts/filterSlice';
+import { getContactsState } from 'redux/contacts/selectors';
+import { Flex, FormLabel, Input, Text } from '@chakra-ui/react';
 
 const FilterContact = () => {
   const { filter } = useSelector(getContactsState);
@@ -14,9 +14,12 @@ const FilterContact = () => {
   };
 
   return (
-    <Section>
-      <Form>
-        <Label>Find contact by name</Label>
+    <Flex justifyContent={'center'}>
+      <FormLabel>
+        <Text fontSize={'lg'} color={'gray.600'}>
+          Contacts
+        </Text>
+        Find contact by name
         <Input
           type="text"
           name="name"
@@ -24,8 +27,8 @@ const FilterContact = () => {
           onChange={changeFilter}
           required
         />
-      </Form>
-    </Section>
+      </FormLabel>
+    </Flex>
   );
 };
 

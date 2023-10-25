@@ -1,8 +1,9 @@
+import { useEffect } from 'react';
 import Item from './Item/Item';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { getContacts } from 'service/api';
-import { getContactsState } from 'redux/selectors';
+import { getContactsState } from 'redux/contacts/selectors';
+import { getContacts } from 'redux/auth/operations';
+import { Container, UnorderedList } from '@chakra-ui/react';
 
 const List = () => {
   const dispatch = useDispatch();
@@ -23,11 +24,13 @@ const List = () => {
   const visibleContacts = getVisibleContacts();
 
   return (
-    <ul>
-      {visibleContacts.map(({ id, number, name }) => (
-        <Item id={id} key={id} name={name} number={number}></Item>
-      ))}
-    </ul>
+    <Container width={300} mt={3}>
+      <UnorderedList spacing={3}>
+        {visibleContacts.map(({ id, number, name }) => (
+          <Item id={id} key={id} name={name} number={number}></Item>
+        ))}
+      </UnorderedList>
+    </Container>
   );
 };
 
