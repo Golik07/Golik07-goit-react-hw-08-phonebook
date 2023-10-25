@@ -1,4 +1,4 @@
-import { Button, ButtonGroup, Spacer } from '@chakra-ui/react';
+import { Button, ButtonGroup } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
 const AuthNav = () => {

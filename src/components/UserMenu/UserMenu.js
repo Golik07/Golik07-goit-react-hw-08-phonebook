@@ -1,4 +1,4 @@
-import { Box, Button, Center, Flex, HStack, Spacer } from '@chakra-ui/react';
+import { Box, Button, Center, Flex, HStack } from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { logOut } from 'redux/auth/operations';
 import { getUser } from 'redux/auth/selectors';

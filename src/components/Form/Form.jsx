@@ -6,7 +6,6 @@ import { getContactsState } from 'redux/contacts/selectors';
 import {
   Box,
   Button,
-  Flex,
   FormLabel,
   Heading,
   Input,

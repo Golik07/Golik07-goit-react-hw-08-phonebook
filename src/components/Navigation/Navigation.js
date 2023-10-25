@@ -5,7 +5,6 @@ import {
   Center,
   Flex,
   HStack,
-  Stack,
 } from '@chakra-ui/react';
 
 import { useSelector } from 'react-redux';

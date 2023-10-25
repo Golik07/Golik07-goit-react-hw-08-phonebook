@@ -10,7 +10,6 @@ import {
   InputGroup,
   ScaleFade,
   Stack,
-  Text,
   useColorModeValue,
 } from '@chakra-ui/react';
 
